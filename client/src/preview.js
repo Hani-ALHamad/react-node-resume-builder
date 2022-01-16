@@ -16,7 +16,6 @@ const Preview = () => {
     coordinates,
     imageData
   } = useContext(AppContext)
-  console.log(imageData)
 
   return(
     <div className='form_box'>

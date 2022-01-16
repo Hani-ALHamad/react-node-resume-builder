@@ -8,13 +8,6 @@ const Context = ({children}) => {
   const [imagePath, changeImagePath] = useState("")
   const [imageData, changeImageData] = useState("")
   const [message, changeMessage] = useState("")
-  // black black, white
-  // green #229954 , white
-  // blue #2471A3, white
-  // purple #7D3C98, white
-  // dark blue #2E4053, white
-  // dark red #A93226, white
-  // gray #cccccc, black
   const [colors, changeColors] = useState(["#CCCCCC", "black"])
   const [name, changeName] = useState("")
   const [jobTitle, changeJobTitle] = useState("")
@@ -94,10 +87,8 @@ const Context = ({children}) => {
   })
   const [coordinates, changeCoordinates] = useState({})
 
-
+  // functions for handling the changes on form
   const handleNameChange = (e) => {
-    console.log(e)
-    console.log(e.value)
     document.getElementById("nameSpan").innerHTML = e.value
     if(document.getElementById("nameSpan").clientWidth + 20 < 600 || e.value.length < name.length) {
       changeName(e.value)
@@ -112,33 +103,25 @@ const Context = ({children}) => {
 }
 
 const handleDetailsChange = (e) => {
-  console.log(e.value.length)
-  console.log(e.value)
-  console.log(e.clientHeight, e.cols)
   document.getElementById("detailsSpan").innerHTML = e.value
-  console.log(document.getElementById("detailsSpan").clientHeight)
   if (document.getElementById("detailsSpan").clientWidth < 600 || e.value.length < details[`${e.id}`].length){
     details[`${e.id}`] = e.value
     const temp = {...details}
     changeDetails(temp)
-    console.log(details)
   }
 } 
 
 const handleContactChange = (e) => {
-  console.log(e.className)
   if(e.className === "contactTitle") {
     contactInfo[`${e.id}`] = e.value
     const temp = { ...contactInfo }
     changeContactInfo(temp)
-    console.log(contactInfo)
   } else {
     document.getElementById("contactSpan").innerHTML = e.value
     if (document.getElementById("contactSpan").clientWidth < 275 || e.value.length < contactInfo[`${e.id}`].length) {
       contactInfo[`${e.id}`] = e.value
       const temp = { ...contactInfo }
       changeContactInfo(temp)
-      console.log(contactInfo)
     }
   }
 }
@@ -149,7 +132,6 @@ const handleContactChange = (e) => {
         skills[`${e.id}`] = e.value
         const temp = { ...skills }
         changeSkills(temp)
-        console.log(skills)
       }
   }
 
@@ -159,7 +141,6 @@ const handleContactChange = (e) => {
       languages[`${e.id}`] = e.value
       const temp = { ...languages }
       changeLanguages(temp)
-      console.log(languages)
     }
   }
 
@@ -170,7 +151,6 @@ const handleContactChange = (e) => {
         experience[`${e.id}`] = e.value
         const temp = { ...experience }
         changeExperience(temp)
-        console.log(experience)
       }
     } else {
       document.getElementById("experienceDetailsSpan").innerHTML = e.value
@@ -178,7 +158,6 @@ const handleContactChange = (e) => {
         experience[`${e.id}`] = e.value
         const temp = { ...experience }
         changeExperience(temp)
-        console.log(experience)
       }
     }
   }
@@ -190,7 +169,6 @@ const handleContactChange = (e) => {
         education[`${e.id}`] = e.value
         const temp = { ...education }
         changeEducation(temp)
-        console.log(education)
       }
     } else {
       document.getElementById("experienceDetailsSpan").innerHTML = e.value
@@ -198,7 +176,6 @@ const handleContactChange = (e) => {
         education[`${e.id}`] = e.value
         const temp = { ...education }
         changeEducation(temp)
-        console.log(education)
       }
     }
   }
@@ -209,10 +186,10 @@ const handleContactChange = (e) => {
       certifications[`${e.id}`] = e.value
       const temp = { ...certifications }
       changeCertifications(temp)
-      console.log(certifications)
     }
   }
 
+  // calculations for top% for each existing field in the form & uploading the image to multer (backend)
   const handleConfirm = () => {
     coordinates.contactInfo_block = false
     coordinates.skills_block = false
@@ -266,11 +243,9 @@ const handleContactChange = (e) => {
           if (item[8] === "t") {
             coordinates.current_top = coordinates.current_top + 3
             coordinates[item] = coordinates.current_top
-            console.log(coordinates)
           } else {
             coordinates.current_top = coordinates.current_top + 2
             coordinates[item] = coordinates.current_top
-            console.log(coordinates)
           }
         }
       })
@@ -284,7 +259,6 @@ const handleContactChange = (e) => {
         if (skills[item].trim() !== "") {
             coordinates.current_top = coordinates.current_top + 2
             coordinates[item] = coordinates.current_top
-            console.log(coordinates)
         }
       })
     }
@@ -297,7 +271,6 @@ const handleContactChange = (e) => {
         if (languages[item].trim() !== "") {
           coordinates.current_top = coordinates.current_top + 2
           coordinates[item] = coordinates.current_top
-          console.log(coordinates)
         }
       })
     }
@@ -313,11 +286,9 @@ const handleContactChange = (e) => {
           if (item.length === 15) {
             coordinates.current_top = coordinates.current_top + 3
             coordinates[item] = coordinates.current_top
-            console.log(coordinates)
           } else {
             coordinates.current_top = coordinates.current_top + 2
             coordinates[item] = coordinates.current_top
-            console.log(coordinates)
           }
         }
       })
@@ -333,11 +304,9 @@ const handleContactChange = (e) => {
           if (item.length === 14) {
             coordinates.current_top = coordinates.current_top + 3
             coordinates[item] = coordinates.current_top
-            console.log(coordinates)
           } else {
             coordinates.current_top = coordinates.current_top + 2
             coordinates[item] = coordinates.current_top
-            console.log(coordinates)
           }
         }
       })
@@ -351,7 +320,6 @@ const handleContactChange = (e) => {
         if (certifications[item].trim() !== ""){
           coordinates.current_top = coordinates.current_top + 2
           coordinates[item] = coordinates.current_top
-          console.log(coordinates)
         }
 
       })
@@ -359,12 +327,9 @@ const handleContactChange = (e) => {
 
 
     const temp = {...coordinates}
-    console.log(coordinates)
     changeCoordinates(temp)
-    console.log(coordinates)
     if(imagePath !== "" && imagePath !== undefined){
 
-      console.log(imagePath)
       const upload = async () => {
         changeMessage("Uploading image...")
         const formData = new FormData()
@@ -376,10 +341,8 @@ const handleContactChange = (e) => {
           changeMessage("")
           changeImageData(response.data)
           changeCurrentScreen("preview")
-          console.log(response.data)
         } 
         else {
-          console.log(response)
           changeMessage("An error occurred, please make sure you are using a valid image.")
         }
       }
@@ -389,12 +352,14 @@ const handleContactChange = (e) => {
     }
   }
 
+  // emptying and changing some states when "go back" button is clicked
   const goBack = () => {
     changeCurrentScreen("editing")
     changeImagePath("")
     changeMessage("")
   }
 
+  // changes the appearance of the currently chosen color
   const handleColorClick = (e, color1, color2) => {
     if(document.getElementsByClassName("svg_container_active")[0]){
       document.getElementsByClassName("svg_container_active")[0].className = "svg_container"
@@ -403,6 +368,7 @@ const handleContactChange = (e) => {
     changeColors([color1, color2])
   }
 
+  // changes some css variables whenever "colors" state is changed
   useEffect(() => {
     document.querySelector(':root').style.setProperty("--gray-clr", colors[0])
     document.querySelector(':root').style.setProperty("--text-clr", colors[1])

@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import './index.css';
-import LoadingPage from './loadingPage';
 import { AppContext } from "./context";
 
 const Middle = () => {
@@ -40,6 +39,7 @@ const Middle = () => {
       <input value={education.educationDate2} onChange={e => handleEducationChange(e.target)} placeholder='mm/yyyy - mm/yyyy' className='experienceDate' id="educationDate2" maxLength="17" type="text" autoComplete='off' />
       <input value={education.education2} onChange={e => handleEducationChange(e.target)} placeholder='Education' className='experience' id="education2" type="text" autoComplete='off' />
       <input value={education.educationDetails2} onChange={e => handleEducationChange(e.target)} placeholder='Education details' className='experienceDetails' id="educationDetails2" type="text" autoComplete='off' />
+      
       <div id="certification_highlights" className='highlights'>Certifications</div>
       <div id="certification_highlights_underline" className='underline' />
       <input value={certifications.certificate1} onChange={e => handleCertificationsChange(e.target)} placeholder='Certificate' className='experience' id="certificate1" type="text" autoComplete='off' />

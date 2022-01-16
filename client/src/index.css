@@ -31,6 +31,8 @@ body {
   z-index: 0;
 }
 
+/* welcome page */
+
 #welcome_container {
   display: flex;
   flex-direction: column;
@@ -68,6 +70,8 @@ body {
 .my_github:hover {
   text-decoration: underline;
 }
+
+/* buttons */
 
 button {
   margin: 1rem;
@@ -131,12 +135,7 @@ button:active {
   filter: var(--medium-shadow-white);
 }
 
-/* .svg {
-  width: 70px;
-  height: 70px;
-  border: 3px solid white;
-} */
-
+/* form */
 
 .form_box {
   min-width: 992px;
@@ -252,13 +251,6 @@ span {
 #description4 {
   top: 19.1%;
 }
-
-/* .contanct_info_box {
-  border: 1px solid red;
-  position: absolute;
-  top: 24%;
-  left: 3%;
-} */
 
 .contactTitle {
   width: 120px;
@@ -704,6 +696,7 @@ span {
   color: black;
 }
 
+/* image */
 
 #image_upload_form {
   width: 342px;

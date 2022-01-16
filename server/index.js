@@ -5,11 +5,12 @@ const sharp = require('sharp')
 
 const port = process.env.PORT
 
+// express
 const app = express()
-
 app.use(express.json())
 
 
+// multer's filter: image size + allowed extensions 
 const avatar = multer({
   limits: {
     fileSize: 5242880
@@ -22,7 +23,7 @@ const avatar = multer({
   }
 })
 
-
+// multer
 app.post("/upload", avatar.single('image'), async (req, res) => {
   const buffer = await sharp(req.file.buffer).resize({ width: 786, height: 677 }).png().toBuffer()
 
@@ -33,6 +34,7 @@ app.post("/upload", avatar.single('image'), async (req, res) => {
   })
 
 
+// necessary when using reactjs & nodejs together
 app.use(express.static(path.resolve(__dirname, "../client/build")));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../client/build', 'index.html')))
 

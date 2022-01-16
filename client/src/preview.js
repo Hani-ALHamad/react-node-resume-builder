@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import './index.css';
-import LoadingPage from './loadingPage';
 import { AppContext } from "./context";
 
 const Preview = () => {
@@ -32,7 +31,6 @@ const Preview = () => {
         <div id="p_details2" className='p_details'>{details.description2}</div>
         <div id="p_details3" className='p_details'>{details.description3}</div>
         <div id="p_details4" className='p_details'>{details.description4}</div>
-        {/* <div className='p_contanct'>{contactInfo.contact1t}</div> */}
       </>
       :
         <>
@@ -42,7 +40,6 @@ const Preview = () => {
           <div id="p_details2" className='p_details' style={{ left: "2.8%" }}>{details.description2}</div>
           <div id="p_details3" className='p_details' style={{ left: "2.8%" }}>{details.description3}</div>
           <div id="p_details4" className='p_details' style={{ left: "2.8%" }}>{details.description4}</div>
-          {/* <div className='p_contanct' style={{ left: "2.8%" }}>{contactInfo.contact1t}</div> */}
         </>
       }
 
@@ -84,7 +81,6 @@ const Preview = () => {
         <div id="certification_highlights_underline" style={{ top: `${coordinates.certifications_highlights_underline}%` }} className='underline' />
         {Object.keys(certifications).map((item) => (
         certifications[item].trim() !== "" ? <div key={item} className="p_experience" style={{ top: `${coordinates[item]}%` }}>{certifications[item]}</div> : <></>))}</> : <></>}
-
     </div>
     
   )

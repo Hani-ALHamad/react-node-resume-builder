@@ -1,11 +1,9 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import './index.css';
-import LoadingPage from './loadingPage';
 import Form from './form'
 import Preview from './preview';
 import { AppContext } from "./context";
 import { jsPDF } from 'jspdf'
-import axios from 'axios'
 import './fonts/BeVietnamPro-ExtraLight-normal.js'
 import './fonts/BeVietnamPro-Light-normal.js'
 import './fonts/BeVietnamPro-Medium-normal.js'
@@ -45,6 +43,7 @@ const App = () => {
   } = useContext(AppContext)
 
 
+  // jspdf function, distances are from coordinates state
   const download = () => {
     // ! width: 2245
     // ! r: 2.2631

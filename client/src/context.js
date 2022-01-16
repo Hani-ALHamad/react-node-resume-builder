@@ -14,15 +14,15 @@ const Context = ({children}) => {
   // purple #7D3C98, white
   // dark blue #2E4053, white
   // dark red #A93226, white
-  //  gray #cccccc, black
+  // gray #cccccc, black
   const [colors, changeColors] = useState(["#CCCCCC", "black"])
-  const [name, changeName] = useState("AAAAAAAAAAAAAAAA")
-  const [jobTitle, changeJobTitle] = useState("AAAAAAAAAAAAAAAAAAAAAAAA")
+  const [name, changeName] = useState("")
+  const [jobTitle, changeJobTitle] = useState("")
   const [details, changeDetails] = useState({
-    description1: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    description2: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    description3: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    description4: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    description1: "",
+    description2: "",
+    description3: "",
+    description4: ""
   })
   const [contactInfo, changeContactInfo] = useState({
     contact1t: "",
@@ -30,59 +30,59 @@ const Context = ({children}) => {
     contact2t: "",
     contact2d: "",
     contact3t: "",
-    contact3d: "OOOOOOOOOOOOOOOOOOOOOOO",
+    contact3d: "",
     contact4t: "",
-    contact4d: "OOOOOOOOOOOOOOOOOOOOOOO",
-    contact5t: "OOOOOOOOOOOOOOOOOOOOOO",
-    contact5d: "OOOOOOOOOOOOOOOOOOOOOOO",
-    contact6t: "OOOOOOOOOOOOOOOOOOOOOO",
-    contact6d: "OOOOOOOOOOOOOOOOOOOOOOO",
-    contact7t: "OOOOOOOOOOOOOOOOOOOOOO",
-    contact7d: "OOOOOOOOOOOOOOOOOOOOOOO",
+    contact4d: "",
+    contact5t: "",
+    contact5d: "",
+    contact6t: "",
+    contact6d: "",
+    contact7t: "",
+    contact7d: "",
   })
   const [skills, changeSkills] = useState({
-    skill1: "OOOOOOOOOOOOOOOOOOOOOOO",
+    skill1: "",
     skill2: "",
     skill3: "",
     skill4: "",
     skill5: "",
     skill6: "",
-    skill7: "OOOOOOOOOOOOOOOOOOOOOOO",
-    skill8: "OOOOOOOOOOOOOOOOOOOOOOO",
-    skill9: "OOOOOOOOOOOOOOOOOOOOOOO",
-    skill10: "OOOOOOOOOOOOOOOOOOOOOOO"
+    skill7: "",
+    skill8: "",
+    skill9: "",
+    skill10: ""
   })
   const [languages, changeLanguages] = useState({
-    language1: "OOOOOOOOOOOOOOOOOOOOOOO",
+    language1: "",
     language2: "",
     language3: "",
     language4: "",
-    language5: "OOOOOOOOOOOOOOOOOOOOOOO",
+    language5: "",
   })
   const [experience, changeExperience] = useState({
-    experienceDate1:"02/2020 - 12/2022",
+    experienceDate1:"",
     experience1:"",
     experienceDetails1:"",
     experienceDate2: "",
     experience2: "",
-    experienceDetails2: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-    experienceDate3: "02/2020 - 12/2022",
+    experienceDetails2: "",
+    experienceDate3: "",
     experience3: "",
     experienceDetails3: "",
-    experienceDate4: "02/2020 - 12/2022",
-    experience4: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-    experienceDetails4: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-    experienceDate5: "02/2020 - 12/2022",
-    experience5: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-    experienceDetails5: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+    experienceDate4: "",
+    experience4: "",
+    experienceDetails4: "",
+    experienceDate5: "",
+    experience5: "",
+    experienceDetails5: "",
   })
   const [education, changeEducation] = useState({
     educationDate1:"",
     education1:"",
     educationDetails1:"",
-    educationDate2: "02/2020 - 12/2022",
-    education2: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-    educationDetails2: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+    educationDate2: "",
+    education2: "",
+    educationDetails2: "",
   })
   const [certifications, changeCertifications] = useState({
     certificate1: "",
@@ -90,7 +90,7 @@ const Context = ({children}) => {
     certificate3: "",
     certificate4: "",
     certificate5: "",
-    certificate6: "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+    certificate6: ""
   })
   const [coordinates, changeCoordinates] = useState({})
 

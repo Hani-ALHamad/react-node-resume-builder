@@ -7,11 +7,6 @@ const port = process.env.PORT
 
 const app = express()
 
-
-
-
-
-app.use(express.static(path.resolve(__dirname, "../client/build")));
 app.use(express.json())
 
 
@@ -38,6 +33,7 @@ app.post("/upload", avatar.single('image'), async (req, res) => {
   })
 
 
+app.use(express.static(path.resolve(__dirname, "../client/build")));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../client/build', 'index.html')))
 
 

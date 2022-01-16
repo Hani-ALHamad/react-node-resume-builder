@@ -237,7 +237,7 @@ const App = () => {
       <Preview />
       <div style={{ color: "white" }}>Choose colors:</div>
       <div id="svgs">
-        <div onClick={e => handleColorClick(e, "#CCCCCC", "black")} className='svg_container'><img className='svg_container_active' src={gray} alt='gray' /></div>
+        <div onClick={e => handleColorClick(e, "#CCCCCC", "black")} className='svg_container'><img className='svg_container' src={gray} alt='gray' /></div>
         <div onClick={e => handleColorClick(e, "black", "white")} className='svg_container'><img className='svg_container' src={black} alt='black' /></div>
         <div onClick={e => handleColorClick(e, "#2471A3", "white")} className='svg_container'><img className='svg_container' src={blue} alt='blue' /></div>
         <div onClick={e => handleColorClick(e, "#2E4053", "white")} className='svg_container'><img className='svg_container' src={darkBlue} alt='dark blue' /></div>

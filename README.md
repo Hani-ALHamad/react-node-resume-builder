@@ -1,6 +1,6 @@
 # Resume Builder (reactjs & nodejs)
 
-# • Link: https://hani-resume-builder.herokuapp.com/   
+# • Link: https://hani-resume-builder.up.railway.app/  
 
 A resume builder app that uses [jsPDF](https://www.npmjs.com/package/jspdf) npm to make pdf files, that npm doesn't turn html to pdf; i just made both html and pdf part separately.    
 

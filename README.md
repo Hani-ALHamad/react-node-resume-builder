@@ -2,7 +2,7 @@
 
 # • Link: https://hani-resume-builder.herokuapp.com/   
 
-A resume builder app that uses [jsPDF](https://www.npmjs.com/package/jspdf) npm to make pdf files, that npm doesn't turn html to pdf; i just made both html and pdf part separately.   
+A resume builder app that uses [jsPDF](https://www.npmjs.com/package/jspdf) npm to make pdf files, that npm doesn't turn html to pdf; i just made both html and pdf part separately.    
 
 ***• Features:*** 
 - The text in pdf file is selectable.   

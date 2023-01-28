@@ -21,7 +21,7 @@ A resume builder app that uses [jsPDF](https://www.npmjs.com/package/jspdf) npm 
 - Npm packages: jsPDF, multer, sharp.   
 - Npm packages i used for development only:  env-cmd, nodemon.   
    
----
+--- 
 
 ![alt text](https://raw.githubusercontent.com/Hani-ALHamad/react-node-resume-builder/main/1.png)   
 

@@ -19,7 +19,7 @@ A resume builder app that uses [jsPDF](https://www.npmjs.com/package/jspdf) npm 
 *• Backend:*   
 - Nodejs: express.   
 - Npm packages: jsPDF, multer, sharp.   
-- Npm packages i used for development only:  env-cmd, nodemon.   
+- Npm packages i used for development only:  env-cmd, nodemon.    
    
 --- 
 
